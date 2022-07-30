@@ -8,9 +8,9 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxtjs/color-mode",
   ],
-  nitro: {
-    preset: "netlify-edge",
-  },
+  // nitro: {
+  //   preset: "netlify-edge",
+  // },
   unocss: {
     preflight: true,
   },
