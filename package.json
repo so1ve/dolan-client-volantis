@@ -1,0 +1,26 @@
+{
+  "name": "dolan-client-volantis",
+  "private": true,
+  "packageManager": "pnpm@7.5.0",
+  "scripts": {
+    "build": "nuxi build",
+    "dev": "nuxi dev",
+    "start": "node .output/server/index.mjs",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "postinstall": "nuxi prepare"
+  },
+  "devDependencies": {
+    "@iconify-json/carbon": "^1.1.6",
+    "@iconify-json/twemoji": "^1.1.5",
+    "@nuxtjs/color-mode": "^3.1.4",
+    "@pinia/nuxt": "^0.3.0",
+    "@so1ve/eslint-config": "^0.26.0",
+    "@unocss/nuxt": "^0.44.5",
+    "@vueuse/nuxt": "^8.9.4",
+    "eslint": "^8.20.0",
+    "nuxt": "^3.0.0-rc.6",
+    "pinia": "^2.0.16",
+    "typescript": "^4.7.4"
+  }
+}
