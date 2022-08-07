@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute();
-const slug = computed(() => route.params.slug);
+const slug = computed(() => route.params.slug as string);
 </script>
 
 <template>

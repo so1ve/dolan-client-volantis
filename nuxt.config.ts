@@ -1,5 +1,7 @@
 import { defineNuxtConfig } from "nuxt";
 
+import transformerVariantGroup from "@unocss/transformer-variant-group";
+
 export default defineNuxtConfig({
   srcDir: "src/",
   modules: [
@@ -8,17 +10,32 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxtjs/color-mode",
   ],
-  // nitro: {
-  //   preset: "netlify-edge",
-  // },
+  nitro: {
+    preset: "cloudflare",
+  },
   unocss: {
     preflight: true,
+    attributify: true,
+    theme: {
+      breakpoints: {
+        "3xl": "2048px",
+      },
+      colors: {
+        card: {
+          bg: "#fff",
+          text: "rgba(68, 68, 68, 0.7)",
+        },
+        text: "#444",
+      },
+    },
+    transformers: [
+      transformerVariantGroup(),
+    ],
   },
   colorMode: {
     classSuffix: "",
   },
   experimental: {
     reactivityTransform: true,
-    viteNode: true,
   },
 });
