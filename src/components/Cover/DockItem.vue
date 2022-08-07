@@ -10,7 +10,7 @@ const { feature } = defineProps<{
   <a
     :key="feature.url"
     backdrop-filter="none"
-    bg="card-bg"
+    :bg="`hover:card-bg ${feature.active ? 'card-bg' : ''}`"
     flex="col grow shrink-0"
     font="semibold"
     items="center"
