@@ -10,9 +10,6 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxtjs/color-mode",
   ],
-  nitro: {
-    preset: "cloudflare",
-  },
   unocss: {
     preflight: true,
     attributify: true,
