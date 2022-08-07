@@ -17,7 +17,7 @@ const { feature } = defineProps<{
     p="3"
     leading="24px"
     rounded="1"
-    text="center 6 card-text"
+    un-text="center 6 card-text"
     content="end"
     :href="feature.url"
     :rel="feature.rel"
@@ -32,7 +32,7 @@ const { feature } = defineProps<{
       max-w="11"
       :src="feature.img"
     >
-    <p text="3.5 text">
+    <p un-text="3.5 text">
       {{ feature.name }}
     </p>
   </a>
