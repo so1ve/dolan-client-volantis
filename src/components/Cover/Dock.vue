@@ -10,28 +10,26 @@ const { logo, title, subtitle, features } = defineProps<{
 </script>
 
 <template>
-  <div>
+  <div
+    un-absolute
+    un-bottom="0"
+    un-max="h-200vh"
+    un-rounded="1.5"
+    un-bg="white/50"
+    un-backdrop="saturate-200 blur-20"
+  >
     <div
-      absolute
-      bottom="0"
-      max-w="full"
-      rounded="1.5"
-      bg="white/50"
-      backdrop="saturate-200 blur-20"
+      un-flex="~ nowrap row gap-1"
+      un-items="stretch"
+      un-rounded="1"
+      un-select="none"
+      un-m="1"
     >
-      <div
-        flex="~ nowrap row gap-1"
-        items="stretch"
-        rounded="1"
-        select="none"
-        m="1"
-      >
-        <CoverDockItem
-          v-for="feature in features"
-          :key="feature.url"
-          :feature="feature"
-        />
-      </div>
+      <CoverDockItem
+        v-for="feature in features"
+        :key="feature.url"
+        :feature="feature"
+      />
     </div>
   </div>
 </template>

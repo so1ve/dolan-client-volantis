@@ -1,4 +1,6 @@
 <script setup>
+import "./styles/main.css";
+
 useHead({
   title: "Dolan Client Volantis",
 });
@@ -9,5 +11,3 @@ useHead({
     <NuxtPage />
   </NuxtLayout>
 </template>
-
-<style src="./styles/main.css"></style>

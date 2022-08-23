@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Feature } from "../types";
+import type { Feature } from "@/types";
 
 const features: Feature[] = [
   {
@@ -25,13 +25,35 @@ const features: Feature[] = [
 </script>
 
 <template>
-  <div>
-    Hello
-    <CoverDock :features="features" />
-    <div w="200px">
-      <WidgetText name="test">
-        22
-      </WidgetText>
+  <div
+    un-relative
+    un-cover
+    un-m="t-16 b-25"
+    un-w="full"
+    un-h="full"
+  >
+    <!-- Hello {{ props.name }} -->
+    <div
+      un-cover
+      un-m="b-12"
+    >
+      <!-- TODO: Font Family -->
+      <p
+        un-text="12.5"
+        un-leading="[1.2]"
+        un-text-shadow="cover"
+      >
+        Volantis
+      </p>
+      <p un-text="size-5">
+        中文创作者社区
+      </p>
+    </div>
+    <div
+      un-cover
+      un-m="t-8"
+    >
+      <CoverDock :features="features" />
     </div>
   </div>
 </template>
