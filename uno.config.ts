@@ -1,4 +1,5 @@
 import { defineConfig, presetAttributify, presetIcons, presetUno, transformerDirectives, transformerVariantGroup } from "unocss";
+import presetRemToPx from "@unocss/preset-rem-to-px";
 
 export default defineConfig({
   shortcuts: {
@@ -57,6 +58,8 @@ export default defineConfig({
       ],
     }),
     presetIcons(),
+    // @ts-expect-error Bad = =
+    presetRemToPx(),
   ],
   transformers: [
     transformerVariantGroup(),

@@ -1,0 +1,18 @@
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3dd9b6;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: 0 0;
+}
+
+::selection {
+  background: rgba(33,150,243,.2);
+}

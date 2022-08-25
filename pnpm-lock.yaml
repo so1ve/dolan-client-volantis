@@ -8,6 +8,7 @@ specifiers:
   '@pinia/nuxt': ^0.4.1
   '@so1ve/eslint-config': ^0.28.1
   '@unocss/nuxt': ^0.45.8
+  '@unocss/preset-rem-to-px': ^0.45.12
   '@vueuse/nuxt': ^9.1.0
   eslint: ^8.22.0
   nuxt: ^3.0.0-rc.8
@@ -22,6 +23,7 @@ devDependencies:
   '@pinia/nuxt': 0.4.1_typescript@4.7.4
   '@so1ve/eslint-config': 0.28.1_4rv7y5c6xz3vfxwhbrcxxi73bq
   '@unocss/nuxt': 0.45.8
+  '@unocss/preset-rem-to-px': 0.45.12
   '@vueuse/nuxt': 9.1.0
   eslint: 8.22.0
   nuxt: 3.0.0-rc.8
@@ -1206,6 +1208,10 @@ packages:
       unconfig: 0.3.5
     dev: true
 
+  /@unocss/core/0.45.12:
+    resolution: {integrity: sha512-21ri/IF/r82lYJTSZ8kBwesSPysaMopMbPy6AtHgCQIHQPsdx6lOzg9Wq5rh+5IjXywXSmuRMuHiYSPjI0yxdw==}
+    dev: true
+
   /@unocss/core/0.45.8:
     resolution: {integrity: sha512-Iskmc1FaxIUAw4HK1U3htvXxJ4YAtffn3+ygNKY8+bzuOqhIk84vbp7SnHV3b8X6IHl4/OYzNRlVFhJQYnWV7g==}
     dev: true
@@ -1261,6 +1267,12 @@ packages:
     resolution: {integrity: sha512-MWQWt7CR9lqR/2N7dnVQrxxuTxxccL7xj82qb8i2P1qQScyVVdPKTeUozu/oA5HrR0ujh+qjV1iTC8RB5HxbbQ==}
     dependencies:
       '@unocss/core': 0.45.8
+    dev: true
+
+  /@unocss/preset-rem-to-px/0.45.12:
+    resolution: {integrity: sha512-FrKLw/W1QrHbXcRthRptzOAKYK8JY03FmtAzgXHOPPO24t4AQPUaFaf813Tungu0svbI38n4ZmJTPg0KNI0qcw==}
+    dependencies:
+      '@unocss/core': 0.45.12
     dev: true
 
   /@unocss/preset-tagify/0.45.8:

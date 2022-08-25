@@ -7,14 +7,11 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div
-    un-flex="~ wrap"
-    un-w="auto"
-    un-max="w-[1080px]"
-    un-m="x-auto"
-    un-justify="between"
-    un-items="stretch"
+  <section
+    un-block
+    un-m="b-4"
+    un-flex="col-gap-4"
   >
-    1
-  </div>
+    <PostCard /><PostCard /><PostCard /><PostCard /><PostCard /><PostCard /><PostCard /><PostCard /><PostCard /><PostCard /><PostCard /><PostCard /><PostCard /><PostCard /><PostCard />
+  </section>
 </template>

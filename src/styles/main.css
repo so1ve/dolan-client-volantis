@@ -1,4 +1,5 @@
 @import "./reset.css";
+@import "./scrollbar.css";
 
 body {
   @apply bg-site-body;

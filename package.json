@@ -18,6 +18,7 @@
     "@pinia/nuxt": "^0.4.1",
     "@so1ve/eslint-config": "^0.28.1",
     "@unocss/nuxt": "^0.45.8",
+    "@unocss/preset-rem-to-px": "^0.45.12",
     "@vueuse/nuxt": "^9.1.0",
     "eslint": "^8.22.0",
     "nuxt": "^3.0.0-rc.8",
