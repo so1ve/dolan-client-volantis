@@ -27,26 +27,16 @@ const currentScrollY = $(useWindowScroll({ window }).y);
 const transformMirror = $computed(() => -currentScrollY);
 const transformImage = $computed(() => -transformMirror * 0.75);
 
-const mirrorCSS: CSSProperties = $computed(() => ({
-  transform: `translate3d(0px, ${transformMirror}px, 0px)`,
-}));
-
-const imageCSS: CSSProperties = $computed(() => ({
-  transform: `translate3d(-${offset}px, ${transformImage}px, 0px)`,
-  width: zoomedWidth,
-}));
+const mirrorTransformText = $computed(() => `translateY(${transformMirror}px)`);
+const imageTransformText = $computed(() => `translate3d(-${offset}px, ${transformImage}px, 0px)`);
 </script>
 
 <template>
   <div class="cover-parallax">
-    <div
-      class="cover-parallax-mirror"
-      :style="mirrorCSS"
-    >
+    <div class="cover-parallax-mirror">
       <!-- TODO: Get real height -->
       <img
         ref="imageRef"
-        :style="imageCSS"
         :src="currentImage"
       >
     </div>
@@ -71,11 +61,13 @@ const imageCSS: CSSProperties = $computed(() => ({
     animation-timing-function: ease-out;
     animation-delay: 0s;
     animation-fill-mode: forwards;
+    transform: v-bind(mirrorTransformText);
 
     & img {
       position: absolute;
       max-width: none;
       height: 100vh;
+      transform: v-bind(imageTransformText);
       width: v-bind(zoomedWidthWithPx);
     }
   }
