@@ -1,3 +1,6 @@
 {
-  "extends": "@so1ve/stylelint-config"
+  "extends": "@so1ve/stylelint-config",
+  "rules": {
+    "value-keyword-case": null
+  }
 }

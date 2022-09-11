@@ -54,7 +54,7 @@ const imageTransformText = $computed(() => `translate3d(-${offset}px, ${transfor
     overflow: hidden;
     width: 100vw;
     height: calc(100vh + 100px);
-    transform: v-bind(mirrortransformtext);
+    transform: v-bind(mirrorTransformText);
     animation-name: fadeIn;
     animation-duration: 0.5s;
     animation-timing-function: ease-out;
@@ -63,10 +63,10 @@ const imageTransformText = $computed(() => `translate3d(-${offset}px, ${transfor
 
     & img {
       position: absolute;
-      width: v-bind(zoomedwidthwithpx);
+      width: v-bind(zoomedWidthWithPx);
       max-width: none;
       height: 100vh;
-      transform: v-bind(imagetransformtext);
+      transform: v-bind(imageTransformText);
     }
   }
 }
