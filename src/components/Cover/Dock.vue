@@ -10,26 +10,56 @@ const { logo, title, subtitle, features } = defineProps<{
 </script>
 
 <template>
-  <div
-    un-absolute
-    un-bottom="0"
-    un-max="h-200vh"
-    un-rounded="1.5"
-    un-bg="white/50"
-    un-backdrop="saturate-200 blur-20"
-  >
-    <div
-      un-flex="~ nowrap row gap-1"
-      un-items="stretch"
-      un-rounded="1"
-      un-select="none"
-      un-m="1"
-    >
-      <CoverDockItem
-        v-for="feature in features"
-        :key="feature.url"
-        :feature="feature"
-      />
+  <div class="cover-dock">
+    <div class="cover-dock-menu">
+      <div class="cover-dock-menu-list">
+        <CoverDockItem
+          v-for="feature in features"
+          :key="feature.url"
+          :feature="feature"
+        />
+      </div>
     </div>
   </div>
 </template>
+
+<style scoped lang="scss">
+@import "@/styles/mixins/cover";
+
+.cover-dock {
+  @include cover;
+
+  margin-top: 32px;
+
+  &-menu {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    border-radius: 6px;
+    background: rgb(255 255 255 / 50%);
+
+    @supports (backdrop-filter: blur(20px)) {
+      backdrop-filter: saturate(200%) blur(20px);
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      flex-wrap: wrap;
+      align-items: stretch;
+      margin: 4px;
+      border-radius: 4px;
+      user-select: none;
+
+      @media screen and (max-width: 500px) {
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+          height: 0;
+        }
+      }
+    }
+  }
+}
+</style>

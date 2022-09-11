@@ -11,31 +11,69 @@ const a = $ref("");
 <template>
   <a
     :key="feature.url"
-    un-backdrop="filter-none"
-    :un-bg="`hover:card-bg ${feature.active ? 'card-bg' : ''}`"
-    un-flex="col grow shrink-0"
-    un-font="semibold"
-    un-items="center"
-    un-p="3"
-    un-leading="[24px]"
-    un-rounded="1"
-    un-text="center 6 card-text"
-    un-content="end"
+    class="cover-dock-item"
     :href="feature.url"
     :rel="feature.rel"
     :target="feature.target"
   >
     <img
       v-if="feature.img"
-      un-block
-      un-rounded="0.5"
-      un-m="1"
-      un-min="w-10"
-      un-max="w-11"
+      class="cover-dock-item-img"
       :src="feature.img"
     >
-    <p un-text="3.5 text">
+    <p class="cover-dock-item-p">
       {{ feature.name }}
     </p>
   </a>
 </template>
+
+<style scoped lang="scss">
+.cover-dock-item {
+  display: flex;
+  flex: 1 0;
+  flex-direction: column;
+  align-content: flex-end;
+  align-items: center;
+  padding: 12px;
+  border-bottom: none;
+  border-radius: 4px;
+  color: rgb(68 68 68 / 70%);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 24px;
+  text-align: center;
+
+  @media screen and (max-width: 500px) {
+    padding: 12px 8px;
+  }
+
+  &:hover,
+  &-active {
+    background: var(--color-card);
+  }
+
+  &-img {
+    display: block;
+    min-width: 40px;
+    max-width: 44px;
+    margin: 4px;
+    border-radius: 2px;
+
+    @media screen and (max-width: 500px) {
+      min-width: 32px;
+      max-width: 36px;
+      margin: 2px 4px;
+    }
+
+    @media screen and (max-width: 768px) {
+      min-width: 36px;
+      max-width: 40px;
+    }
+  }
+
+  &-p {
+    color: var(--color-text);
+    font-size: 0.875rem;
+  }
+}
+</style>

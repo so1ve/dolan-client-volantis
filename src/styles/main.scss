@@ -1,0 +1,22 @@
+@import "./reset";
+@import "./scrollbar";
+@import "./variables";
+
+html {
+  font-family: Dosis, "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+}
+
+body {
+  background-color: var(--color-site-body);
+}
+
+a {
+  color: #2092ec;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.28s ease;
+}
+
+a:hover {
+  color: #ff5722;
+}

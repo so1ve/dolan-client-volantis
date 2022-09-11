@@ -7,12 +7,19 @@ export default defineNuxtConfig({
     "@unocss/nuxt",
     "@pinia/nuxt",
     "@nuxtjs/color-mode",
+    "@nuxtjs/google-fonts",
+    "unplugin-icons/nuxt",
   ],
   unocss: {
     preflight: true,
   },
   colorMode: {
     classSuffix: "",
+  },
+  googleFonts: {
+    families: {
+      Dosis: [500],
+    },
   },
   experimental: {
     reactivityTransform: true,

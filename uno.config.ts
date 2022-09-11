@@ -1,15 +1,28 @@
-import { defineConfig, presetAttributify, presetIcons, presetUno, transformerDirectives, transformerVariantGroup } from "unocss";
+import {
+  defineConfig,
+  presetAttributify,
+  presetIcons,
+  presetUno,
+  transformerDirectives,
+  transformerVariantGroup,
+} from "unocss";
 import presetRemToPx from "@unocss/preset-rem-to-px";
 
 export default defineConfig({
-  shortcuts: {
-    cover: "flex flex-col items-center justify-center max-w-full",
-  },
   theme: {
     breakpoints: {
       "3xl": "2048px",
     },
     colors: {
+      p: "#444",
+      heading: {
+        1: "#3a3a3a",
+        2: "#3a3a3a",
+        3: "#333",
+        4: "#444",
+        5: "#555",
+        6: "#666",
+      },
       site: {
         body: "#f4f4f4",
         bg: "#f4f4f4",

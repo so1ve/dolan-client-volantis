@@ -1,12 +1,12 @@
 ::-webkit-scrollbar {
-  height: 4px;
   width: 4px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
+  border-radius: 2px;
   background: #3dd9b6;
   cursor: pointer;
-  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-track-piece {
@@ -14,5 +14,5 @@
 }
 
 ::selection {
-  background: rgba(33,150,243,.2);
+  background: rgb(33 150 243 / 20%);
 }

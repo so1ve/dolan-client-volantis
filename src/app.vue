@@ -1,5 +1,5 @@
 <script setup>
-import "./styles/main.css";
+import "./styles/main.scss";
 
 useHead({
   title: "Dolan Client Volantis",

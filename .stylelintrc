@@ -1,0 +1,7 @@
+{
+  "extends": "@so1ve/stylelint-config",
+  "rules": {
+    "at-rule-no-unknown": null,
+    "block-no-empty": null
+  }
+}

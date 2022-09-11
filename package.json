@@ -1,29 +1,39 @@
 {
   "name": "dolan-client-volantis",
   "private": true,
-  "packageManager": "pnpm@7.5.0",
+  "packageManager": "pnpm@7.9.5",
   "scripts": {
     "build": "nuxi build",
     "dev": "nuxi dev",
     "start": "node .output/server/index.mjs",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint:js": "eslint .",
+    "lint:js:fix": "nr lint:js --fix",
+    "lint:css": "stylelint src/**/*.{html,vue,css,scss}",
+    "lint:css:fix": "nr lint:css --fix",
+    "lint": "nr lint:js && nr lint:css",
+    "lint:fix": "nr lint:js:fix && nr lint:css:fix",
     "postinstall": "nuxi prepare"
   },
   "devDependencies": {
-    "@dolan-x/shared": "^0.0.30",
+    "@antfu/ni": "^0.18.0",
+    "@dolan-x/shared": "^0.0.31",
     "@iconify-json/carbon": "^1.1.7",
     "@iconify-json/zondicons": "^1.1.2",
-    "@nuxtjs/color-mode": "^3.1.4",
-    "@pinia/nuxt": "^0.4.1",
-    "@so1ve/eslint-config": "^0.28.1",
-    "@unocss/nuxt": "^0.45.8",
-    "@unocss/preset-rem-to-px": "^0.45.12",
-    "@vueuse/nuxt": "^9.1.0",
-    "eslint": "^8.22.0",
-    "nuxt": "^3.0.0-rc.8",
-    "pinia": "^2.0.20",
-    "typescript": "^4.7.4"
+    "@nuxtjs/color-mode": "^3.1.5",
+    "@nuxtjs/google-fonts": "3.0.0-0",
+    "@pinia/nuxt": "^0.4.2",
+    "@so1ve/eslint-config": "^0.29.1",
+    "@so1ve/stylelint-config": "^0.2.2",
+    "@unocss/nuxt": "^0.45.18",
+    "@unocss/preset-rem-to-px": "^0.45.18",
+    "@vueuse/nuxt": "^9.2.0",
+    "eslint": "^8.23.0",
+    "nuxt": "^3.0.0-rc.9",
+    "pinia": "^2.0.22",
+    "sass": "^1.54.9",
+    "stylelint": "^14.11.0",
+    "typescript": "^4.8.3",
+    "unplugin-icons": "^0.14.9"
   },
   "pnpm": {
     "allowedDeprecatedVersions": {
@@ -34,7 +44,8 @@
         "unplugin",
         "vite",
         "vue",
-        "webpack"
+        "webpack",
+        "postcss"
       ]
     }
   }

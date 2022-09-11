@@ -5,10 +5,19 @@ definePageMeta({
 </script>
 
 <template>
-  <div
-    un-w="[calc(100%_-_1_*_240px)]"
-    un-p="r-4"
-  >
+  <div class="home">
     <PostList />
   </div>
 </template>
+
+<style scoped lang="scss">
+.home {
+  width: calc(100% - 1 * 240px);
+  padding-right: 16px;
+
+  @media screen and (max-width: 768px) and (max-width: 500px) {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+</style>
