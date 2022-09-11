@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { CSSProperties } from "vue";
-
 const props = defineProps<{
   images: string[]
 }>();
