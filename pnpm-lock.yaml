@@ -9,7 +9,7 @@ specifiers:
   '@nuxtjs/google-fonts': 3.0.0-0
   '@pinia/nuxt': ^0.4.2
   '@so1ve/eslint-config': ^0.29.1
-  '@so1ve/stylelint-config': ^0.2.2
+  '@so1ve/stylelint-config': ^0.2.3
   '@vueuse/nuxt': ^9.2.0
   eslint: ^8.23.0
   nuxt: ^3.0.0-rc.9
@@ -28,7 +28,7 @@ devDependencies:
   '@nuxtjs/google-fonts': 3.0.0-0
   '@pinia/nuxt': 0.4.2_typescript@4.8.3
   '@so1ve/eslint-config': 0.29.1_itqs5654cmlnjraw6gjzqacppi
-  '@so1ve/stylelint-config': 0.2.2_stylelint@14.11.0
+  '@so1ve/stylelint-config': 0.2.3_stylelint@14.11.0
   '@vueuse/nuxt': 9.2.0_nuxt@3.0.0-rc.9
   eslint: 8.23.0
   nuxt: 3.0.0-rc.9_dsrd75777hs6fibw4pgbqghre4
@@ -1218,8 +1218,8 @@ packages:
       - typescript
     dev: true
 
-  /@so1ve/stylelint-config-basic/0.2.2_stylelint@14.11.0:
-    resolution: {integrity: sha512-ej+9QO0ZkyGooplqTc65w3twi9/8PmCaG2SEIMbSruh4URa6RUQmQChtq5Bi4W1L50oThChl2H1aBh4ogVwoYg==}
+  /@so1ve/stylelint-config-basic/0.2.3_stylelint@14.11.0:
+    resolution: {integrity: sha512-jORXb5T0ApTU6jHmTRTba97b2pQzrBCCQjOHK1xSrvkhfLQbhPz+FNSbQeL7rkrgC3idepV1kzeBji7SC7zrXw==}
     peerDependencies:
       postcss: ^8.3.11
       stylelint: ^14.11.0
@@ -1227,14 +1227,14 @@ packages:
       postcss:
         optional: true
     dependencies:
-      '@so1ve/stylelint-config-order': 0.2.2_stylelint@14.11.0
+      '@so1ve/stylelint-config-order': 0.2.3_stylelint@14.11.0
       postcss-html: 1.5.0
       stylelint: 14.11.0
       stylelint-config-standard: 28.0.0_stylelint@14.11.0
     dev: true
 
-  /@so1ve/stylelint-config-order/0.2.2_stylelint@14.11.0:
-    resolution: {integrity: sha512-SXwxSAb5QaRjFkrGwn3WCyxBgoo3kKavdLiyVw3X/KZp8yXvkT42zHgDtOskL7kd4F4QOytCGL3FZ4irdcsiKA==}
+  /@so1ve/stylelint-config-order/0.2.3_stylelint@14.11.0:
+    resolution: {integrity: sha512-zYntPy2YPPlq6rWYF3pMgpLMMtxyUXagy0q3qj7F9WDdNj6Fk37IFMjf9cD0QBU4P8ugBdKAgE3zLwtYgB9wsQ==}
     peerDependencies:
       postcss: ^8.3.11
       stylelint: ^14.11.0
@@ -1246,8 +1246,8 @@ packages:
       stylelint-order: 5.0.0_stylelint@14.11.0
     dev: true
 
-  /@so1ve/stylelint-config-scss/0.2.2_stylelint@14.11.0:
-    resolution: {integrity: sha512-qm+h9BR/4eu2NpWLdYVc4hJWBLAZ2HlLfBCXr4+44gN9sMKxxrczqZ5PqQ8kUfV+f4xwAdGJfukaKrbtMEEj7A==}
+  /@so1ve/stylelint-config-scss/0.2.3_stylelint@14.11.0:
+    resolution: {integrity: sha512-YhERAvLYbCRgMFTJW8VLXtOavB6UUg0R6MlmgIUrMSxoTEMVYCFVKgOF7qGJaQUyDao2fLGI7NYcxYw32gdFuA==}
     peerDependencies:
       postcss: ^8.3.11
       stylelint: ^14.11.0
@@ -1255,15 +1255,15 @@ packages:
       postcss:
         optional: true
     dependencies:
-      '@so1ve/stylelint-config-basic': 0.2.2_stylelint@14.11.0
+      '@so1ve/stylelint-config-basic': 0.2.3_stylelint@14.11.0
       postcss-html: 1.5.0
       stylelint: 14.11.0
       stylelint-config-standard-scss: 5.0.0_stylelint@14.11.0
       stylelint-scss: 4.3.0_stylelint@14.11.0
     dev: true
 
-  /@so1ve/stylelint-config/0.2.2_stylelint@14.11.0:
-    resolution: {integrity: sha512-87pbWC1Rspiv1tDClCeXN++w5L+4pAGCDkYoGLYtWkEYJcahqhGFSPkJcYTWvybrRUsgGaT9Or3gL2XLcda0tg==}
+  /@so1ve/stylelint-config/0.2.3_stylelint@14.11.0:
+    resolution: {integrity: sha512-h12rNcWw+xeKxrUFlq+iuu7G3DGy1gOMgsrvT2xL1pSV6ov1QLBQZEZHiDqhgbk49ZuPXoIov5Q/GfO0FLyxMw==}
     peerDependencies:
       postcss: ^8.3.11
       stylelint: ^14.11.0
@@ -1271,8 +1271,8 @@ packages:
       postcss:
         optional: true
     dependencies:
-      '@so1ve/stylelint-config-basic': 0.2.2_stylelint@14.11.0
-      '@so1ve/stylelint-config-scss': 0.2.2_stylelint@14.11.0
+      '@so1ve/stylelint-config-basic': 0.2.3_stylelint@14.11.0
+      '@so1ve/stylelint-config-scss': 0.2.3_stylelint@14.11.0
       postcss-html: 1.5.0
       stylelint: 14.11.0
     dev: true
