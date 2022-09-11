@@ -44,9 +44,7 @@ const { logo, title, subtitle, features } = defineProps<{
 
     &-list {
       display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      flex-wrap: wrap;
+      flex-flow: nowrap row;
       align-items: stretch;
       margin: 4px;
       border-radius: 4px;
