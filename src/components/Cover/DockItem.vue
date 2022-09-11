@@ -9,10 +9,10 @@ const a = $ref("");
 </script>
 
 <template>
-  <a
+  <NuxtLink
     :key="feature.url"
     class="cover-dock-item"
-    :href="feature.url"
+    :to="feature.url"
     :rel="feature.rel"
     :target="feature.target"
   >
@@ -24,7 +24,7 @@ const a = $ref("");
     <p class="cover-dock-item-p">
       {{ feature.name }}
     </p>
-  </a>
+  </NuxtLink>
 </template>
 
 <style scoped lang="scss">

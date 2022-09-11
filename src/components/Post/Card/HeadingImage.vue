@@ -8,16 +8,16 @@ const props = defineProps<{
 
 <template>
   <div class="post-card-heading-image">
-    <a
+    <NuxtLink
       class="post-card-heading-image-a"
-      :href="getPostLink(props.post.slug)"
+      :to="getPostLink(props.post.slug)"
     >
       <img
         class="post-card-heading-image-img"
         :alt="props.post.title"
         :src="props.post.metas.headingImage"
       >
-    </a>
+    </NuxtLink>
   </div>
 </template>
 

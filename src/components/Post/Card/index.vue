@@ -10,13 +10,13 @@ const props = defineProps<{
   <div class="post-card">
     <PostCardHeadingImage v-if="props.post.metas.headingImage" :post="props.post" />
     <h2 class="post-card-title">
-      <a
+      <NuxtLink
         class="post-card-title-a"
         target="_blank"
-        :href="getPostLink(props.post.slug)"
+        :to="getPostLink(props.post.slug)"
       >
         {{ props.post.title }}
-      </a>
+      </NuxtLink>
     </h2>
     <div class="post-card-excerpt">
       {{ props.post.excerpt }}

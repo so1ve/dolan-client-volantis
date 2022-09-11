@@ -32,13 +32,13 @@ const formattedCreatedDate = useDateFormat(props.post.created, "YYYY-MM-DD");
       <Dot v-if="props.post.categories.length" />
     </div>
     <div class="post-card-meta-end">
-      <a
+      <NuxtLink
         class="post-card-meta-end-readmore"
         itemprop="url"
-        rel="external nofollow noopener noreferrer" :href="getPostLink(props.post.slug)"
+        rel="external nofollow noopener noreferrer" :to="getPostLink(props.post.slug)"
       >
         阅读更多
-      </a>
+      </NuxtLink>
     </div>
   </div>
 </template>
