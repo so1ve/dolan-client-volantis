@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <VltsHeader name="" /> -->
+    <LayoutHeader name="" />
     <Cover />
     <div id="volantis-main" class="volantis-main">
       <div class="body-wrapper">

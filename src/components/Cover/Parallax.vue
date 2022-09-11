@@ -9,11 +9,6 @@ const imageRef = $ref<HTMLImageElement | null>(null);
 
 const imageRealSize = reactive({ width: 0, height: 0 });
 
-watch(() => imageRef?.naturalHeight, () => {
-  imageRealSize.height = imageRef?.naturalHeight as number;
-  imageRealSize.width = imageRef?.naturalWidth as number;
-});
-
 const currentIndex = $ref(0);
 const currentImage = $computed(() => props.images[currentIndex]);
 
@@ -24,6 +19,13 @@ const offset = $computed(() => (zoomedWidth - windowSize.width.value) / 2);
 const currentScrollY = $(useWindowScroll({ window }).y);
 const transformMirror = $computed(() => -currentScrollY);
 const transformImage = $computed(() => -transformMirror * 0.75);
+
+watch(() => imageRef, () => {
+  imageRef?.addEventListener("load", () => {
+    imageRealSize.width = imageRef?.naturalWidth;
+    imageRealSize.height = imageRef?.naturalHeight;
+  });
+});
 
 const mirrorTransformText = $computed(() => `translateY(${transformMirror}px)`);
 const imageTransformText = $computed(() => `translate3d(-${offset}px, ${transformImage}px, 0px)`);
