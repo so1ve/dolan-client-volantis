@@ -34,8 +34,7 @@ const formattedCreatedDate = useDateFormat(props.post.created, "YYYY-MM-DD");
     <div class="post-card-meta-end">
       <NuxtLink
         class="post-card-meta-end-readmore"
-        itemprop="url"
-        rel="external nofollow noopener noreferrer" :to="getPostLink(props.post.slug)"
+        :to="getPostLink(props.post.slug)"
       >
         阅读更多
       </NuxtLink>

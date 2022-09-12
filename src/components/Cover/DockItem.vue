@@ -28,6 +28,8 @@ const a = $ref("");
 </template>
 
 <style scoped lang="scss">
+@import "@/styles/defines.scss";
+
 .cover-dock-item {
   display: flex;
   flex: 1 0;
@@ -43,7 +45,7 @@ const a = $ref("");
   line-height: 24px;
   text-align: center;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: $device-mobile) {
     padding: 12px 8px;
   }
 
@@ -59,13 +61,13 @@ const a = $ref("");
     margin: 4px;
     border-radius: 2px;
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: $device-mobile) {
       min-width: 32px;
       max-width: 36px;
       margin: 2px 4px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $device-tablet) {
       min-width: 36px;
       max-width: 40px;
     }

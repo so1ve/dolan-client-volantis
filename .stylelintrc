@@ -1,6 +1,7 @@
 {
   "extends": "@so1ve/stylelint-config",
   "rules": {
-    "value-keyword-case": null
+    "value-keyword-case": null,
+    "scss/at-import-partial-extension":"always"
   }
 }

@@ -1,6 +1,17 @@
+<script setup lang="ts">
+import type { NavItem } from "@/types";
+
+const items: NavItem[] = [
+  {
+    name: "Test",
+    href: "/",
+  },
+];
+</script>
+
 <template>
   <div>
-    <LayoutHeader name="" />
+    <LayoutHeader title="Volantis" :items="items" />
     <Cover />
     <div id="volantis-main" class="volantis-main">
       <div class="body-wrapper">

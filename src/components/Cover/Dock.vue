@@ -24,7 +24,9 @@ const { logo, title, subtitle, features } = defineProps<{
 </template>
 
 <style scoped lang="scss">
-@import "@/styles/mixins/cover";
+@import "@/styles/mixins/cover.scss";
+@import "@/styles/mixins/effects.scss";
+@import "@/styles/defines.scss";
 
 .cover-dock {
   @include cover;
@@ -32,15 +34,13 @@ const { logo, title, subtitle, features } = defineProps<{
   margin-top: 32px;
 
   &-menu {
+    @include blur;
+
     position: absolute;
     bottom: 0;
     max-width: 100%;
     border-radius: 6px;
     background: rgb(255 255 255 / 50%);
-
-    @supports (backdrop-filter: blur(20px)) {
-      backdrop-filter: saturate(200%) blur(20px);
-    }
 
     &-list {
       display: flex;
@@ -50,7 +50,7 @@ const { logo, title, subtitle, features } = defineProps<{
       border-radius: 4px;
       user-select: none;
 
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: $device-mobile) {
         overflow-x: scroll;
 
         &::-webkit-scrollbar {

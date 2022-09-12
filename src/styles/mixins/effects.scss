@@ -1,0 +1,6 @@
+@mixin blur {
+  @supports (backdrop-filter:blur(20px)) {
+    background: rgb(255 255 255 / 90%) !important;
+    backdrop-filter: saturate(200%) blur(20px);
+  }
+}

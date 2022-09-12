@@ -18,7 +18,7 @@ const props = defineProps<{
 </template>
 
 <style scoped lang="scss">
-@import "@/styles/mixins/cover";
+@import "@/styles/mixins/cover.scss";
 
 .cover-title {
   @include cover;

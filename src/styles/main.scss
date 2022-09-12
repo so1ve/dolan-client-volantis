@@ -1,13 +1,21 @@
-@import "./reset";
-@import "./scrollbar";
-@import "./variables";
+@import "./reset.scss";
+@import "./scrollbar.scss";
+@import "./variables.scss";
 
 html {
+  width: 100%;
+  height: 100%;
+  color: var(--color-text);
+  font-size: 16px;
   font-family: Dosis, "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
 }
 
 body {
   background-color: var(--color-site-body);
+  line-height: 1.6;
+  text-rendering: optimizelegibility;
+  -webkit-tap-highlight-color: transparent;
+  text-size-adjust: 100%;
 }
 
 a {

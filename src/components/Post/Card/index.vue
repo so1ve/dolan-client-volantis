@@ -12,7 +12,6 @@ const props = defineProps<{
     <h2 class="post-card-title">
       <NuxtLink
         class="post-card-title-a"
-        target="_blank"
         :to="getPostLink(props.post.slug)"
       >
         {{ props.post.title }}
@@ -26,7 +25,12 @@ const props = defineProps<{
 </template>
 
 <style scoped lang="scss">
+@import "@/styles/mixins/cover.scss";
+@import "@/styles/mixins/effects.scss";
+
 .post-card {
+  @include blur;
+
   overflow: hidden;
   margin-bottom: 16px;
   padding: 24px;
@@ -37,7 +41,6 @@ const props = defineProps<{
   visibility: visible;
   transition: all 0.28s ease 0s, opacity 0.8s ease-out 0s, transform 0.8s ease-out 0s;
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-  backdrop-filter: saturate(200%) blur(20px);
 
   &:hover {
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%), 0 4px 8px 0 rgb(0 0 0 / 10%), 0 8px 16px 0 rgb(0 0 0 / 10%);
